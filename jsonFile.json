@@ -1,0 +1,249 @@
+{
+  "players": [
+    {
+      "id": "99114874-30e0-4a6d-8ea0-4846ecaa1a07",
+      "health": 100,
+      "defense": 100,
+      "mana": 100,
+      "name": "Luigi_Graham",
+      "items": [
+        {
+          "id": "card1",
+          "name": "Fireball",
+          "cardType": "attack",
+          "value": 20,
+          "manaCost": 5,
+          "effect": "",
+          "effectValue": 0,
+          "duration": 0,
+          "stackable": false
+        },
+        {
+          "id": "card1",
+          "name": "Fireball",
+          "cardType": "attack",
+          "value": 20,
+          "manaCost": 5,
+          "effect": "",
+          "effectValue": 0,
+          "duration": 0,
+          "stackable": false
+        },
+        {
+          "id": "card3",
+          "name": "Healing Potion",
+          "cardType": "heal",
+          "value": 25,
+          "manaCost": 2,
+          "effect": "",
+          "effectValue": 0,
+          "duration": 0,
+          "stackable": false
+        },
+        {
+          "id": "card1",
+          "name": "Fireball",
+          "cardType": "attack",
+          "value": 20,
+          "manaCost": 5,
+          "effect": "",
+          "effectValue": 0,
+          "duration": 0,
+          "stackable": false
+        },
+        {
+          "id": "card1",
+          "name": "Fireball",
+          "cardType": "attack",
+          "value": 20,
+          "manaCost": 5,
+          "effect": "",
+          "effectValue": 0,
+          "duration": 0,
+          "stackable": false
+        },
+        {
+          "id": "card2",
+          "name": "Shield Block",
+          "cardType": "defense",
+          "value": 15,
+          "manaCost": 3,
+          "effect": "",
+          "effectValue": 0,
+          "duration": 0,
+          "stackable": false
+        },
+        {
+          "id": "card3",
+          "name": "Healing Potion",
+          "cardType": "heal",
+          "value": 25,
+          "manaCost": 2,
+          "effect": "",
+          "effectValue": 0,
+          "duration": 0,
+          "stackable": false
+        },
+        {
+          "id": "card1",
+          "name": "Fireball",
+          "cardType": "attack",
+          "value": 20,
+          "manaCost": 5,
+          "effect": "",
+          "effectValue": 0,
+          "duration": 0,
+          "stackable": false
+        },
+        {
+          "id": "card1",
+          "name": "Fireball",
+          "cardType": "attack",
+          "value": 20,
+          "manaCost": 5,
+          "effect": "",
+          "effectValue": 0,
+          "duration": 0,
+          "stackable": false
+        },
+        {
+          "id": "card3",
+          "name": "Healing Potion",
+          "cardType": "heal",
+          "value": 25,
+          "manaCost": 2,
+          "effect": "",
+          "effectValue": 0,
+          "duration": 0,
+          "stackable": false
+        }
+      ],
+      "buffs": null,
+      "deBuffs": null
+    },
+    {
+      "id": "755a1913-43d5-4770-8607-f29a9b7b77e9",
+      "health": 100,
+      "defense": 100,
+      "mana": 100,
+      "name": "Barrett_Koelpin",
+      "items": [
+        {
+          "id": "card2",
+          "name": "Shield Block",
+          "cardType": "defense",
+          "value": 15,
+          "manaCost": 3,
+          "effect": "",
+          "effectValue": 0,
+          "duration": 0,
+          "stackable": false
+        },
+        {
+          "id": "card2",
+          "name": "Shield Block",
+          "cardType": "defense",
+          "value": 15,
+          "manaCost": 3,
+          "effect": "",
+          "effectValue": 0,
+          "duration": 0,
+          "stackable": false
+        },
+        {
+          "id": "card1",
+          "name": "Fireball",
+          "cardType": "attack",
+          "value": 20,
+          "manaCost": 5,
+          "effect": "",
+          "effectValue": 0,
+          "duration": 0,
+          "stackable": false
+        },
+        {
+          "id": "card2",
+          "name": "Shield Block",
+          "cardType": "defense",
+          "value": 15,
+          "manaCost": 3,
+          "effect": "",
+          "effectValue": 0,
+          "duration": 0,
+          "stackable": false
+        },
+        {
+          "id": "card3",
+          "name": "Healing Potion",
+          "cardType": "heal",
+          "value": 25,
+          "manaCost": 2,
+          "effect": "",
+          "effectValue": 0,
+          "duration": 0,
+          "stackable": false
+        },
+        {
+          "id": "card1",
+          "name": "Fireball",
+          "cardType": "attack",
+          "value": 20,
+          "manaCost": 5,
+          "effect": "",
+          "effectValue": 0,
+          "duration": 0,
+          "stackable": false
+        },
+        {
+          "id": "card2",
+          "name": "Shield Block",
+          "cardType": "defense",
+          "value": 15,
+          "manaCost": 3,
+          "effect": "",
+          "effectValue": 0,
+          "duration": 0,
+          "stackable": false
+        },
+        {
+          "id": "card1",
+          "name": "Fireball",
+          "cardType": "attack",
+          "value": 20,
+          "manaCost": 5,
+          "effect": "",
+          "effectValue": 0,
+          "duration": 0,
+          "stackable": false
+        },
+        {
+          "id": "card3",
+          "name": "Healing Potion",
+          "cardType": "heal",
+          "value": 25,
+          "manaCost": 2,
+          "effect": "",
+          "effectValue": 0,
+          "duration": 0,
+          "stackable": false
+        },
+        {
+          "id": "card3",
+          "name": "Healing Potion",
+          "cardType": "heal",
+          "value": 25,
+          "manaCost": 2,
+          "effect": "",
+          "effectValue": 0,
+          "duration": 0,
+          "stackable": false
+        }
+      ],
+      "buffs": null,
+      "deBuffs": null
+    }
+  ],
+  "turnIndex": 0,
+  "isGameOver": false,
+  "Turn": { "cardsID": null, "target": "" }
+}

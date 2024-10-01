@@ -1,0 +1,5 @@
+{
+    "roomName": "smt",
+    "roomPassword": "smt",
+    "userName": "{{$randomUserName}}"
+}
