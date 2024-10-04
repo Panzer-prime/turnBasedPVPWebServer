@@ -21,6 +21,7 @@ func (rm *RoomManager) handleWebSocketConnection(w http.ResponseWriter, r *http.
 		http.Error(w, "Failed to upgrade to WebSocket", http.StatusInternalServerError)
 		return
 	}
+
 	defer conn.Close()
 
 
@@ -55,10 +56,7 @@ func (rm *RoomManager) joinRoom(roomID string, conn *websocket.Conn, playerID st
 		return fmt.Errorf("Room %s not found", roomID)
 	}
 
-	if len(room.Clients) >= room.MaxPlayers{
-		return fmt.Errorf("room is full number of max connection is %v", room.MaxPlayers)
-	}
-	// Ensure playerID exists in the room
+	// Check if the player is reconnecting
 	var playerExists bool
 	for _, player := range room.GameState.Players {
 		if player.ID == playerID {
@@ -67,17 +65,37 @@ func (rm *RoomManager) joinRoom(roomID string, conn *websocket.Conn, playerID st
 		}
 	}
 
-	if !playerExists {
-		return fmt.Errorf("player %s not found in room %s", playerID, roomID)
+	if playerExists {
+		// Player is reconnecting, allow them to rejoin even if the room is full
+		log.Printf("Player %s is reconnecting to room %s", playerID, roomID)
+
+		// If player is already connected, do not add again
+		if _, alreadyConnected := room.Clients[conn]; alreadyConnected {
+			return fmt.Errorf("player %s is already connected to room %s", playerID, roomID)
+		}
+	} else {
+		// Check if the room is full before adding a new player
+		if len(room.GameState.Players) >= room.MaxPlayers {
+			conn.WriteJSON(map[string]interface{}{
+				"message": "Room is full",
+				"error":   true,
+			})
+			return fmt.Errorf("Room %s is full, max number of players is %d", roomID, room.MaxPlayers)
+		}
 	}
 
+	// Add or reconnect the player
 	rm.mu.Lock()
 	room.Clients[conn] = true
+	if !playerExists {
+		room.GameState.Players = append(room.GameState.Players, game.CreatePlayer(CreateUniqueID(), playerID))
+	}
 	rm.mu.Unlock()
 
-	log.Printf("Player %s joined room %s", playerID, roomID)
+	log.Printf("Player %s joined/reconnected to room %s", playerID, roomID)
 	return nil
 }
+
 
 func (rm *RoomManager) handleMessages(conn *websocket.Conn, roomID string, playerID string)  error {
 	rm.mu.RLock()
@@ -151,3 +169,4 @@ func (rm *RoomManager) broadcast(room *Room) {
 		}
 	}
 }
+
